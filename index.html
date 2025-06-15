@@ -3,23 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Игра: Найди точки на прямой</title>
+    <title>Игра: Построй прямую</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <h1>Найди точки на прямой</h1>
-        <div class="task">
-            <p>Найди на графике точки:</p>
-            <div id="points-list"></div>
+        <h1>Построй прямую</h1>
+
+        <!-- Блок таймера -->
+        <div class="timer-settings">
+            <label>
+                <input type="checkbox" id="timer-enable">
+                Включить таймер
+            </label>
+            <input type="number" id="timer-seconds" min="1" value="30">
+            <span id="timer-display"></span>
         </div>
+
+        <!-- Статистика -->
+        <div class="score">
+            <div class="score-box"><span>Правильно:</span><span id="wins">0</span></div>
+            <div class="score-box"><span>Ошибки:</span><span id="losses">0</span></div>
+        </div>
+
+        <div class="equation" id="equation"></div>
+
+        <p>Выберите две точки, через которые проходит эта прямая:</p>
+        <div id="selected-points"></div>
+        <div id="round-timer" class="round-timer"></div>
         <div id="chart-container"></div>
+
         <div class="feedback" id="feedback"></div>
-        <button id="new-game-btn">Новая игра</button>
+        <button id="check-btn">Проверить</button>
     </div>
-    <script charset="utf-8" src="line-game.js"></script>
+
+    <script src="line-game.js"></script>
 </body>
 
 </html>

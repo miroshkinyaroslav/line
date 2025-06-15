@@ -19,10 +19,26 @@ h1 {
     color: #2c3e50;
 }
 
+.stats {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.stats span {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
 #chart-container {
     width: 100%;
     height: 500px;
     margin: 20px auto;
+}
+
+#chart-container canvas {
+    cursor: pointer;
 }
 
 .task {
@@ -65,3 +81,92 @@ button {
 button:hover {
     background-color: #2980b9;
 }
+
+
+.score {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+
+.score-box {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.score-box span:first-child {
+    display: block;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.score-box span:last-child {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Все предыдущие стили остаются */
+/* Добавляем новые стили для уравнения и точек */
+
+.equation {
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#selected-points {
+    min-height: 30px;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.selected-point {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #27ae60;
+    color: white;
+    border-radius: 5px;
+}
+
+.highlighted-point {
+    fill: #a3e4d7 !important;
+    /* Светло-зеленый для подсветки */
+}
+
+.selected-point-highlight {
+    fill: #27ae60 !important;
+    /* Зеленый для выбранных точек */
+    opacity: 1 !important;
+}
+
+.timer-settings {
+    margin: 10px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-size: 16px;
+}
+
+#timer-display {
+    min-width: 60px;
+    font-weight: bold;
+    color: #e67e22; }
+
+
+.round-timer {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 0;
+    color: #e67e22;     }
