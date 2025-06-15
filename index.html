@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Игра: Построй прямую</title>
+
+    <!-- *** ВАЖНО: имя файла CSS должно совпадать *** -->
     <link rel="stylesheet" href="styles.css">
+
     <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -13,17 +16,16 @@
     <div class="container">
         <h1>Построй прямую</h1>
 
-        <!-- Блок таймера -->
+        <!-- Настройка таймера -->
         <div class="timer-settings">
             <label>
                 <input type="checkbox" id="timer-enable">
                 Включить таймер
             </label>
             <input type="number" id="timer-seconds" min="1" value="30">
-            <span id="timer-display"></span>
         </div>
 
-        <!-- Статистика -->
+        <!-- Счёт -->
         <div class="score">
             <div class="score-box"><span>Правильно:</span><span id="wins">0</span></div>
             <div class="score-box"><span>Ошибки:</span><span id="losses">0</span></div>
@@ -33,13 +35,18 @@
 
         <p>Выберите две точки, через которые проходит эта прямая:</p>
         <div id="selected-points"></div>
+
+        <!-- Индикатор обратного отсчёта -->
         <div id="round-timer" class="round-timer"></div>
+
+        <!-- Поле игры -->
         <div id="chart-container"></div>
 
         <div class="feedback" id="feedback"></div>
         <button id="check-btn">Проверить</button>
     </div>
 
+    <!-- *** ВАЖНО: имя файла JS должно совпадать *** -->
     <script src="line-game.js"></script>
 </body>
 
